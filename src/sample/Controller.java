@@ -15,6 +15,8 @@ public class Controller {
     private Boolean start = true;
     private String operator = "";
 
+    Model model = new Model();
+
     @FXML
     private void onNumberClick(ActionEvent event) {
 
@@ -35,25 +37,29 @@ public class Controller {
 
         //System.out.println("onOperatorClick worked.");
         tempValue = ((Button)event.getSource()).getText();
+        start = true;
 
         if(!tempValue.equals("=")) {
-            if(!operator.isEmpty())
+            if(!operator.isEmpty()) {
+
+                display.setText(String.valueOf(model.calculateLong(tempNum, Long.parseLong(display.getText()), operator)));
+                tempNum = Long.parseLong(display.getText());
+                operator = tempValue;
                 return;
+            }
 
             operator = tempValue;
             tempNum = Long.parseLong(display.getText());
-            display.setText("");
         }
         else {
             if(operator.isEmpty())
                 return;
 
-            //display.setText(String.valueOf());
+            display.setText(String.valueOf(model.calculateLong(tempNum, Long.parseLong(display.getText()), operator)));
             operator = "";
             start = true;
         }
     }
-
 
 
 }

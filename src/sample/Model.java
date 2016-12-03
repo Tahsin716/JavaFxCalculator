@@ -10,7 +10,7 @@ public class Model {
         else if (operator.equals("-")) {
             return number1 - number2;
         }
-        else if (operator.equals("*")) {
+        else if (operator.equals("x")) {
             return number1 * number2;
         }
         else if (operator.equals("/")) {

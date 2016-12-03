@@ -21,6 +21,8 @@ public class Controller {
     private void onNumberClick(ActionEvent event) {
 
         //System.out.println("onNumberClick worked.");
+
+        //So that the display is set to blank, as the new number will get appended with the previos one
         if(start) {
             display.setText("");
             start = false;
@@ -38,9 +40,6 @@ public class Controller {
         //System.out.println("onOperatorClick worked.");
         tempValue = ((Button)event.getSource()).getText();
 
-        //So that the display is set to blank, as the new number will get appended with the previos one
-        start = true;
-
         if(!tempValue.equals("=")) {
 
             //Clear everything
@@ -49,8 +48,23 @@ public class Controller {
                 operator = "";
                 tempValue = "";
                 display.setText("0");
+                start = true;
                 return;
             }
+
+            //For negative number
+            if(tempValue.equals("-") && display.getText().equals("0")) {
+                display.setText("-");
+                start = false;
+                return;
+            }
+
+            //Incase minus sign for negative number is input multiple times
+            if(tempValue.equals("-") && display.getText().equals("-")) {
+                start = false;
+                return;
+            }
+
 
             //For trailing calculations like (5 +3 * 11 - 2 / 6)
             if(!operator.isEmpty()) {
@@ -58,11 +72,16 @@ public class Controller {
                 display.setText(String.valueOf(model.calculateLong(tempNum, Long.parseLong(display.getText()), operator)));
                 tempNum = Long.parseLong(display.getText());
                 operator = tempValue;
+                start = true;
                 return;
             }
 
-            operator = tempValue;
-            tempNum = Long.parseLong(display.getText());
+            //For input of other operators
+            if(!display.getText().equals("-")) {
+                operator = tempValue;
+                tempNum = Long.parseLong(display.getText());
+                start = true;
+            }
         }
         else {
             //In case the user presses "=", without inputting any numbers to calculate

@@ -37,9 +37,22 @@ public class Controller {
 
         //System.out.println("onOperatorClick worked.");
         tempValue = ((Button)event.getSource()).getText();
+
+        //So that the display is set to blank, as the new number will get appended with the previos one
         start = true;
 
         if(!tempValue.equals("=")) {
+
+            //Clear everything
+            if(tempValue.equals("C")){
+                tempNum = 0L;
+                operator = "";
+                tempValue = "";
+                display.setText("0");
+                return;
+            }
+
+            //For trailing calculations like (5 +3 * 11 - 2 / 6)
             if(!operator.isEmpty()) {
 
                 display.setText(String.valueOf(model.calculateLong(tempNum, Long.parseLong(display.getText()), operator)));
@@ -52,6 +65,7 @@ public class Controller {
             tempNum = Long.parseLong(display.getText());
         }
         else {
+            //In case the user presses "=", without inputting any numbers to calculate
             if(operator.isEmpty())
                 return;
 
@@ -61,5 +75,6 @@ public class Controller {
         }
     }
 
-
 }
+
+//TODO: i) negative input, ii) double input, iii) fractional part in division, iv) bigint and bigdouble

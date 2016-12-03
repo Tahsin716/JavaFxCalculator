@@ -2,23 +2,15 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" fx:controller="sample.Controller" prefHeight="420.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label alignment="CENTER_RIGHT" disable="true" layoutX="128.0" layoutY="33.0" prefHeight="100.0" text="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font size="50.0" />
-         </font>
-         <padding>
-            <Insets right="10.0" />
-         </padding>
-      </Label>
       <GridPane layoutX="6.0" layoutY="84.0" prefHeight="334.0" prefWidth="334.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -163,5 +155,10 @@
             </Button>
          </children>
       </GridPane>
+      <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutX="122.0" layoutY="44.0" prefHeight="80.0" prefWidth="340.0" text="0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

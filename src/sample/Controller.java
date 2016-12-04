@@ -11,7 +11,7 @@ public class Controller {
     private TextField display;
 
     private String tempValue = "";
-    private Long tempNum = 0L;
+    private String tempNum = "";
     private Boolean start = true;
     private String operator = "";
 
@@ -44,7 +44,7 @@ public class Controller {
 
             //Clear everything
             if(tempValue.equals("C")){
-                tempNum = 0L;
+                tempNum = "";
                 operator = "";
                 tempValue = "";
                 display.setText("0");
@@ -69,8 +69,8 @@ public class Controller {
             //For trailing calculations like (5 +3 * 11 - 2 / 6)
             if(!operator.isEmpty()) {
 
-                display.setText(String.valueOf(model.calculateLong(tempNum, Long.parseLong(display.getText()), operator)));
-                tempNum = Long.parseLong(display.getText());
+                display.setText(model.dataProcess(tempNum, display.getText(), operator));
+                tempNum = display.getText();
                 operator = tempValue;
                 start = true;
                 return;
@@ -79,7 +79,7 @@ public class Controller {
             //For input of other operators
             if(!display.getText().equals("-")) {
                 operator = tempValue;
-                tempNum = Long.parseLong(display.getText());
+                tempNum = display.getText();
                 start = true;
             }
         }
@@ -88,7 +88,7 @@ public class Controller {
             if(operator.isEmpty())
                 return;
 
-            display.setText(String.valueOf(model.calculateLong(tempNum, Long.parseLong(display.getText()), operator)));
+            display.setText(model.dataProcess(tempNum, display.getText(), operator));
             operator = "";
             start = true;
         }

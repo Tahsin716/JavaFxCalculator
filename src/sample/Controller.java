@@ -52,6 +52,14 @@ public class Controller {
                 return;
             }
 
+            //For decimal input
+            if(tempValue.equals(".") && !display.getText().contains(".")) {
+
+                display.setText(display.getText() + tempValue);
+                start = false;
+                return;
+            }
+
             //For negative number
             if(tempValue.equals("-") && display.getText().equals("0")) {
                 display.setText("-");

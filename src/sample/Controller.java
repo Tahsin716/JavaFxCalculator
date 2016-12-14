@@ -53,7 +53,14 @@ public class Controller {
             }
 
             //For decimal input
-            if(tempValue.equals(".") && !display.getText().contains(".")) {
+            if(tempValue.equals(".")) {
+
+                //Incase only '.' is pressed and no other number before
+                if(!operator.isEmpty()) {
+                    display.setText("0" + tempValue);
+                    start = false;
+                    return;
+                }
 
                 display.setText(display.getText() + tempValue);
                 start = false;

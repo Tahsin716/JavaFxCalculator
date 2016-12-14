@@ -52,6 +52,19 @@ public class Controller {
                 return;
             }
 
+            if(tempValue.equals("←") && !display.getText().equals("0")) {
+
+                if(display.getText().length() <= 1) {
+                    display.setText("0");
+                    start = true;
+                }
+                else {
+                    display.setText(display.getText().substring(0, display.getText().length() - 1));
+                    start = false;
+                }
+                return;
+            }
+
             //For decimal input
             if(tempValue.equals(".")) {
 

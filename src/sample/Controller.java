@@ -53,9 +53,9 @@ public class Controller {
             }
 
             //For Backspace Character
-            if(tempValue.equals("←") && !display.getText().equals("0")) {
+            if(tempValue.equals("←")) {
 
-                if(display.getText().length() <= 1) {
+                if(display.getText().length() <= 1 && !display.getText().equals("0")) {
                     display.setText("0");
                     start = true;
                     return;
@@ -73,7 +73,6 @@ public class Controller {
             //For Square-Root calculation
             if(tempValue.equals("√") && (!display.getText().contains(".") || !display.getText().contains("-"))) {
                 display.setText(model.calculateRoot(display.getText()));
-                operator = "";
                 start = true;
                 return;
             }
@@ -92,9 +91,12 @@ public class Controller {
                     start = false;
                     return;
                 }
-                else
+                else if(start && !display.getText().contains(".")){
+                    display.setText(display.getText() + tempValue);
+                    start = false;
                     return;
-
+                }
+                return;
             }
 
             //For negative number

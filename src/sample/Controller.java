@@ -52,18 +52,26 @@ public class Controller {
                 return;
             }
 
+            //For Backspace Character
             if(tempValue.equals("←") && !display.getText().equals("0")) {
 
                 if(display.getText().length() <= 1) {
                     display.setText("0");
                     start = true;
+                    return;
                 }
-                else {
+                else if(display.getText().length() > 1){
+
                     display.setText(display.getText().substring(0, display.getText().length() - 1));
                     start = false;
+                    return;
                 }
-                return;
+                else
+                    return;
             }
+
+            //if(tempValue.equals(""))
+
 
             //For decimal input
             if(tempValue.equals(".")) {
@@ -74,10 +82,15 @@ public class Controller {
                     start = false;
                     return;
                 }
+                else if(!start && !display.getText().contains(".")){
 
-                display.setText(display.getText() + tempValue);
-                start = false;
-                return;
+                    display.setText(display.getText() + tempValue);
+                    start = false;
+                    return;
+                }
+                else
+                    return;
+
             }
 
             //For negative number

@@ -70,10 +70,15 @@ public class Controller {
                     return;
             }
 
-            //if(tempValue.equals(""))
+            //For Square-Root calculation
+            if(tempValue.equals("√") && (!display.getText().contains(".") || !display.getText().contains("-"))) {
+                display.setText(model.calculateRoot(display.getText()));
+                operator = "";
+                start = true;
+                return;
+            }
 
-
-            //For decimal input
+            //For Decimal Input
             if(tempValue.equals(".")) {
 
                 //Incase only '.' is pressed and no other number before
@@ -83,7 +88,6 @@ public class Controller {
                     return;
                 }
                 else if(!start && !display.getText().contains(".")){
-
                     display.setText(display.getText() + tempValue);
                     start = false;
                     return;
@@ -105,7 +109,6 @@ public class Controller {
                 start = false;
                 return;
             }
-
 
             //For trailing calculations like (5 +3 * 11 - 2 / 6)
             if(!operator.isEmpty()) {

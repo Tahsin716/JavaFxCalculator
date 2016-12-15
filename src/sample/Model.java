@@ -20,6 +20,21 @@ public class Model {
         return result;
     }
 
+    public String calculateRoot(String number) {
+
+        String root = "0";
+
+        try {
+            root = String.valueOf(Math.sqrt(Double.parseDouble(number)));
+            if(root.endsWith(".0"))
+                root = root.substring(0, root.length() - 2);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return root;
+    }
+
 
     public String calculateLong(long number1, long number2, String operator){
 

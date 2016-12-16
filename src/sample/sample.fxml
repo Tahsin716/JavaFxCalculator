@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="385.0" stylesheets="@fxcalculator.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <GridPane layoutX="6.0" layoutY="84.0" prefHeight="334.0" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <GridPane layoutX="6.0" layoutY="84.0" prefHeight="334.0" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -26,7 +26,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="70.0" prefWidth="180.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="65.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
                <font>
                   <Font size="30.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button layoutX="95.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button layoutX="95.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -50,7 +50,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="4" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="4" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
@@ -58,7 +58,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
@@ -66,7 +66,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="/" GridPane.columnIndex="3">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="/" GridPane.columnIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
@@ -82,7 +82,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="1" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="1" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
@@ -90,7 +90,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
@@ -98,7 +98,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
@@ -106,7 +106,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -114,7 +114,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
@@ -122,7 +122,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="C">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="C">
                <font>
                   <Font size="30.0" />
                </font>
@@ -130,7 +130,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="30.0" prefWidth="85.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="65.0" prefWidth="182.0" styleClass="button_equal" stylesheets="@fxcalculator.css" text="=" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
                <font>
                   <Font size="30.0" />
                </font>
@@ -138,7 +138,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
@@ -146,7 +146,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" text="7" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onAction="#onNumberClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_number" stylesheets="@fxcalculator.css" text="7" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -154,7 +154,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="30.0" prefWidth="85.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="30.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="." GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="30.0" />
                </font>
@@ -162,7 +162,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="←" GridPane.columnIndex="1">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="←" GridPane.columnIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -170,7 +170,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" text="√" GridPane.columnIndex="2">
+            <Button mnemonicParsing="false" onAction="#onOperatorClick" prefHeight="99.0" prefWidth="85.0" styleClass="button_operator" stylesheets="@fxcalculator.css" text="√" GridPane.columnIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
@@ -179,10 +179,13 @@
                </GridPane.margin>
             </Button>
          </children>
+         <padding>
+            <Insets bottom="3.0" left="5.0" />
+         </padding>
       </GridPane>
-      <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutY="21.0" prefHeight="100.0" prefWidth="385.0" text="0" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutY="21.0" prefHeight="100.0" prefWidth="385.0" styleClass="display" stylesheets="@fxcalculator.css" text="0" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
-            <Font size="25.0" />
+            <Font name="Nyala" size="25.0" />
          </font>
       </TextField>
    </children>

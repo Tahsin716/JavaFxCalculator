@@ -1,0 +1,33 @@
+
+.button_number{
+
+    -fx-background-color: #333232;
+    -fx-text-fill: #f9fcfc;
+
+}
+
+.button_operator{
+
+    -fx-background-color: #34363a;
+    -fx-text-fill: #f9fcfc;
+}
+
+.button_equal{
+
+    -fx-background-color: #f45302;
+    -fx-text-fill: #f9fcfc;
+}
+
+.button_number:hover{
+    -fx-background-color: #686b70;
+}
+
+.display{
+    -fx-background-color: #000105;
+    -fx-text-fill: #02d102;
+    -fx-font
+}
+
+.root{
+    -fx-background-color: #09101c;
+}

@@ -18,14 +18,17 @@
     -fx-text-fill: #f9fcfc;
 }
 
-.button_number:hover{
+.button_number:hover , .button_operator:hover{
     -fx-background-color: #686b70;
+}
+
+.button_equal:hover{
+    -fx-background-color: #ff6100;
 }
 
 .display{
     -fx-background-color: #000105;
     -fx-text-fill: #02d102;
-    -fx-font
 }
 
 .root{

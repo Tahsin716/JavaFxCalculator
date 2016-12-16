@@ -185,7 +185,7 @@
       </GridPane>
       <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutY="21.0" prefHeight="100.0" prefWidth="385.0" styleClass="display" stylesheets="@fxcalculator.css" text="0" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
-            <Font name="Nyala" size="25.0" />
+            <Font name="Digital-7 MonoItalic" size="36.0" />
          </font>
       </TextField>
    </children>
